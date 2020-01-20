@@ -5,7 +5,7 @@ plugins {
     id("org.openjfx.javafxplugin") version "0.0.8"
 }
 group = "eu.redasurc"
-version = "1.0-SNAPSHOT"
+version = "1.1-SNAPSHOT"
 
 buildscript {
     repositories {
