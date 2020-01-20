@@ -139,7 +139,7 @@ fun fromHRTime(t: String): Double {
             "d" -> value * 24 * 60 * 60
             else -> 0.0
         }
-        i = k + 1
+        i = k
     }
     return total
 }
