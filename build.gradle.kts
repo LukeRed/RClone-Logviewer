@@ -1,11 +1,27 @@
 import org.gradle.jvm.tasks.Jar
-
 plugins {
     java
     kotlin("jvm") version "1.3.41"
+    id("org.openjfx.javafxplugin") version "0.0.8"
 }
 group = "eu.redasurc"
 version = "1.0-SNAPSHOT"
+
+buildscript {
+    repositories {
+        maven {
+            setUrl("https://plugins.gradle.org/m2/")
+        }
+    }
+    dependencies {
+        classpath("org.openjfx:javafx-plugin:0.0.8")
+    }
+}
+apply(plugin = "org.openjfx.javafxplugin")
+
+javafx {
+    modules("javafx.controls", "javafx.fxml")
+}
 
 dependencies {
     compile(kotlin("stdlib"))
